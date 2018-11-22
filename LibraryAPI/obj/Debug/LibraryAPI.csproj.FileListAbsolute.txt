@@ -1,0 +1,94 @@
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\ApplicationInsights.config
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\roslyn\csc.exe
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\roslyn\System.Collections.Immutable.dll
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\roslyn\vbc.exe
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\roslyn\VBCSCompiler.exe
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\roslyn\VBCSCompiler.exe.config
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\LibraryAPI.dll.config
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\LibraryAPI.dll
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\LibraryAPI.pdb
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\EntityFramework.dll
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\EntityFramework.SqlServer.dll
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\Microsoft.AI.Web.dll
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\Microsoft.AI.WindowsServer.dll
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\Microsoft.ApplicationInsights.dll
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\Newtonsoft.Json.dll
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\System.Net.Http.Formatting.dll
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\System.Web.Http.dll
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\System.Web.Http.WebHost.dll
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\EntityFramework.xml
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\EntityFramework.SqlServer.xml
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\Microsoft.AI.Web.xml
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\Microsoft.AI.WindowsServer.xml
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\Microsoft.ApplicationInsights.xml
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\Newtonsoft.Json.xml
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\System.Net.Http.Formatting.xml
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\System.Web.Http.xml
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\bin\System.Web.Http.WebHost.xml
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\obj\Debug\LibraryAPI.csprojResolveAssemblyReference.cache
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\obj\Debug\LibraryAPI.dll
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\obj\Debug\LibraryAPI.pdb
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\obj\Debug\LibraryAPI.Migrations.Initial.resources
+c:\users\dell\documents\visual studio 2015\Projects\LibraryAPI\LibraryAPI\obj\Debug\LibraryAPI.csproj.GenerateResource.Cache
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\ApplicationInsights.config
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\roslyn\csc.exe
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\roslyn\System.Collections.Immutable.dll
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\roslyn\System.Reflection.Metadata.dll
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\roslyn\vbc.exe
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\roslyn\VBCSCompiler.exe
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\roslyn\VBCSCompiler.exe.config
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\LibraryAPI.dll.config
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\LibraryAPI.dll
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\LibraryAPI.pdb
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\EntityFramework.dll
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\EntityFramework.SqlServer.dll
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\Microsoft.AI.Agent.Intercept.dll
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\Microsoft.AI.DependencyCollector.dll
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\Microsoft.AI.Web.dll
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\Microsoft.AI.WindowsServer.dll
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\Microsoft.ApplicationInsights.dll
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\Newtonsoft.Json.dll
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\System.Net.Http.Formatting.dll
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\System.Web.Http.dll
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\System.Web.Http.WebHost.dll
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\EntityFramework.xml
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\EntityFramework.SqlServer.xml
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\Microsoft.AI.DependencyCollector.xml
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\Microsoft.AI.Web.xml
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\Microsoft.AI.WindowsServer.xml
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\Microsoft.ApplicationInsights.xml
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\Newtonsoft.Json.xml
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\System.Net.Http.Formatting.xml
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\System.Web.Http.xml
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\bin\System.Web.Http.WebHost.xml
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\obj\Debug\LibraryAPI.Migrations.Initial.resources
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\obj\Debug\LibraryAPI.csproj.GenerateResource.Cache
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\obj\Debug\LibraryAPI.dll
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\obj\Debug\LibraryAPI.pdb
+E:\inetpub\wwwroot\LibraryAPI\LibraryAPI\obj\Debug\LibraryAPI.csprojResolveAssemblyReference.cache

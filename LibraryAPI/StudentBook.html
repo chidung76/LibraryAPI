@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>FPT Library</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="scripts/ng-file-upload.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/select/1.2.5/js/dataTables.select.min.js"></script>
+
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="background-color:black;color:lightgray">FPT Library</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="Book.html">Book <span class="sr-only">(current)</span></a></li>
+                    <li><a href="Student.html">Student</a></li>
+                    <li><a href="StudentBook.html">Borrow Book</a></li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="~/StudentBook.html"><i class="fas fa-sign-out-alt"></i> Student Login</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container body-content">
+
+        <div class="container" ng-app="myApp" ng-controller="myCtrl">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>BORROW BOOK</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Loading data to table -->
+                <div class="col-xs-12 col-md-8">
+                    <table id="stdBookTable"
+                           class="table table-bordered
+					 table-condensed table-striped">
+                        <thead>
+                            <tr ng-show="loading" id="loading">
+                                <td colspan="100%" align="center"><img src="../img/loading.gif"></td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">Student ID</th>
+                                <th class="text-center">Call Number</th>
+                                <th class="text-center">Issue Date</th>
+                                <th class="text-center">Due Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="x in stdBook">
+                                <td>{{x.StudentId}}</td>
+                                <td>{{x.CallNumber}}</td>
+                                <td>{{x.IssueDate | date:'dd-MM-yyyy'}}</td>
+                                <td>{{x.DueDate | date:'dd-MM-yyyy'}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- CRUD Form -->
+                <div class="col-xs-6 col-xs-4">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <button type="button" id="addButton"
+                                    class="btn btn-primary"
+                                    ng-click="formClear();">
+                                <i class="fas fa-plus-circle"></i> Borrow Book
+                            </button>
+                        </div>
+                    </div>
+                    <br />
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading text-center">
+                                    <h4>Borrowing Information</h4>
+                                </div>
+
+                                <div class="panel-body">
+                                    <div class="form-group">
+                                        <label for="Studentid">Student ID</label>
+                                        <input type="text" id="Studentid"
+                                               class="form-control" ng-disabled="button" required ng-init="button=false"
+                                               ng-model="stdBookForm.StudentId" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Callnumber">Call Number</label>
+                                        <input type="text" id="Callnumber"
+                                               class="form-control" ng-model="stdBookForm.CallNumber" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Issuedate">Issue Date</label>
+                                        <input type="date" id="Issuedate"
+                                               class="form-control" ng-model="stdBookForm.IssueDate" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Duedate">Due Date</label>
+                                        <input type="date" id="Duedate"
+                                               class="form-control" ng-model="stdBookForm.DueDate" />
+                                    </div>
+                                </div>
+
+                                <div class="panel-footer">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <button type="button" id="updateButton"
+                                                    class="btn btn-primary"
+                                                    ng-click="addUpdateClick(stdBookForm.BorrowId);">
+                                                Create
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+        <div>
+            <footer>
+                <p>&copy; Boss Cong - My ASP.NET Application</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+            var app = angular.module("myApp", []);
+            app.controller("myCtrl", function ($scope, $http, $timeout) {
+                $scope.loading = true;
+                //Loading data table
+                $http.get("api/StudentBooks").then(function (response) {
+                    $scope.formClear();
+                    $scope.stdBook = response.data;
+                    $scope.refreshTable();
+                    $scope.loading = false;
+                });
+
+                //Loading data to Table
+                $scope.refreshTable = function () {
+                    $('#stdBookTable').DataTable().destroy();
+                    $timeout(function () {
+                        $('#stdBookTable').DataTable({
+                            lengthMenu: [[40, 10, 20, 30], ["All", 10, 25, 50]],
+                        });
+                    });
+                };
+
+                // Clear Form
+                $scope.formClear = function () {
+                    //$scope.categoryForm = {};
+                    $scope.button = false;
+                    $scope.bookForm = new Object();
+                    $scope.bookForm.CallNumber = "";
+                    $scope.add = "Create";
+                };
+
+                $scope.addUpdateClick = function (id) {
+                    //Adding Book
+                    $http.post("api/StudentBooks", $scope.stdBookForm).then(function (response) {
+                        $scope.stdBook.push(response.data);
+                        $scope.refreshTable();
+                        $scope.formClear();
+                    });
+                };
+            });
+    </script>
+</body>
+</html>

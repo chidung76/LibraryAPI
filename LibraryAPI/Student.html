@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>FPT Library</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="scripts/ng-file-upload.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/select/1.2.5/js/dataTables.select.min.js"></script>
+
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="background-color:black;color:lightgray">FPT Library</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="Book.html">Book <span class="sr-only">(current)</span></a></li>
+                    <li><a href="Student.html">Student</a></li>
+                    <li><a href="StudentBook.html">Borrow Book</a></li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="~/StudentBook.html"><i class="fas fa-sign-out-alt"></i> Student Login</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container body-content">
+        <div class="container" ng-app="myApp" ng-controller="myCtrl">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>STUDENT INFORMATION</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Loading data to table -->
+                <div class="col-xs-12 col-md-8">
+                    <table id="bookTable"
+                           class="table table-bordered
+					 table-condensed table-striped">
+                        <thead>
+                            <tr ng-show="loading" id="loading">
+                                <td colspan="100%" align="center"><img src="../img/loading.gif"></td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">Student ID</th>
+                                <th class="text-center">Student Name</th>
+                                <th class="text-center">Address</th>
+                                <th class="text-center">Phone</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="x in student">
+                                <td>{{x.StudentId}}</td>
+                                <td>{{x.StudentName}}</td>
+                                <td>{{x.Address}}</td>
+                                <td>{{x.Phone}}</td>
+                                <td class="text-center">
+                                    <button type='button' ng-click='itemGet(x.StudentId);'
+                                            class='btn btn-success'
+                                            data-id=' + x.StudentId + '>
+                                        <span class='glyphicon glyphicon-edit' />
+                                    </button>
+
+                                    <button type='button' ng-click='itemDelete(x.StudentId);'
+                                            class='btn btn-danger'>
+                                        <span class='glyphicon glyphicon-remove' />
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- CRUD Form -->
+                <div class="col-xs-6 col-xs-4">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <button type="button" id="addButton"
+                                    class="btn btn-primary"
+                                    ng-click="formClear();">
+                                <i class="fas fa-plus-circle"></i> Add Student
+                            </button>
+                        </div>
+                    </div>
+                    <br />
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading text-center">
+                                    <h4>Student Information</h4>
+                                </div>
+
+                                <div class="panel-body">
+                                    <div class="form-group">
+                                        <label for="Studentid">Student ID</label>
+                                        <input type="text" id="Studentid"
+                                               class="form-control" ng-disabled="button" required ng-init="button=false"
+                                               ng-model="studentForm.StudentId" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Studentname">Student Name</label>
+                                        <input type="text" id="Studentname"
+                                               class="form-control" ng-model="studentForm.StudentName" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Address">Address</label>
+                                        <input type="text" id="Address"
+                                               class="form-control" ng-model="studentForm.Address" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Phone">Phone</label>
+                                        <input type="text" id="Phone"
+                                               class="form-control" ng-model="studentForm.Phone" />
+                                    </div>
+                                </div>
+
+                                <div class="panel-footer">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <button type="button" id="updateButton"
+                                                    class="btn btn-primary"
+                                                    ng-click="addUpdateClick(studentForm.StudentId);">
+                                                {{add}}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <hr />
+        <div>
+            <footer>
+                <p>&copy; Boss Cong - My ASP.NET Application</p>
+            </footer>
+        </div>
+    </div>
+
+        <script>
+            var app = angular.module("myApp", []);
+            app.controller("myCtrl", function ($scope, $http, $timeout) {
+                $scope.add = "Create";
+                $scope.loading = true;
+                //Loading data table
+                $http.get("api/Students").then(function (response) {
+                    $scope.formClear();
+                    $scope.student = response.data;
+                    $scope.refreshTable();
+                    $scope.loading = false;
+                });
+                //var option = {
+                //    title: {
+                //        text: "This is chart of boss"
+                //    },
+                //    axisX: { labelAngle: 0 },
+                //    //showInLegend: true,
+                //    data: [
+                //    {
+                //        // Change type to "doughnut", "line", "splineArea", etc.
+                //        type: "column",
+                //        dataPoints: [],
+                //    }
+                //    ]
+                //};
+                //$.each(response.data, function(index, value) {
+                //    option.data[0].dataPoints.push({
+                //        label: value.ProductName,
+                //        y: value.Amount
+                //    });
+                //});
+                //chart = new CanvasJS.Chart("chartContainer", option);
+                //chart.render();
+
+                //$scope.formClear();
+                //Loading data to Table
+                $scope.refreshTable = function () {
+                    $('#bookTable').DataTable().destroy();
+                    $timeout(function () {
+                        $('#bookTable').DataTable({
+                            lengthMenu: [[40, 10, 20, 30], ["All", 10, 25, 50]],
+                        });
+                    });
+                };
+
+                //Binding data to Form
+                $scope.itemGet = function (id) {
+                    $http.get("api/Students/" + id).then(function (response) {
+                        $scope.button = true;
+                        $scope.studentForm = response.data;
+                    });
+                    $scope.add = "Update";
+                };
+
+                // Clear Form
+                $scope.formClear = function () {
+                    //$scope.categoryForm = {};
+                    $scope.button = false;
+                    $scope.studentForm = new Object();
+                    $scope.studentForm.StudentId = "";
+                    $scope.add = "Create";
+                };
+
+                //$('#uploadButton').click(function () {
+                //    if ($('#file1').val() == '') {
+                //        alert('Please select file');
+                //        return;
+                //    }
+                //    var formData = new FormData();
+                //    var file = $('#file1')[0];
+                //    formData.append('file', file.files[0]);
+                //    $.ajax({
+                //        url: 'http://localhost:5077/api/Uploads',
+                //        type: 'POST',
+                //        data: {'' formData},
+                //        contentType: false,
+                //        processData: false,
+                //        success: function (data) {
+                //            $('#Image').val(data);
+                //        },
+                //    });
+                //});
+
+                $scope.addUpdateClick = function (id) {
+                    var index = $scope.student.findIndex(item => item.StudentId == id);
+                    if (index < 0) {
+                        //Adding Book
+                        $http.post("api/Students", $scope.studentForm).then(function (response) {
+                            $scope.student.push(response.data);
+                            $scope.refreshTable();
+                            $scope.formClear();
+                        });
+                    }
+                    else {
+                        // Updating Book
+                        $http.put("api/Students/" + id, $scope.studentForm).then(function (response) {
+                            //var index = $scope.book.findIndex(item => item.CallNumber == id);
+                            $scope.student[index] = $scope.studentForm;
+                            $scope.refreshTable();
+                            $scope.formClear();
+                        });
+
+                        //var data = {
+                        //		ProductName: $scope.product.ProductName,
+                        //		IntroductionDate: $scope.product.IntroductionDate,
+                        //		Url: $scope.product.Url
+                        //	};
+                        //	$http.put("product_" + id + ".json", data).then(function(response) {
+                        //		$scope.ServerResponse = data;
+                        //	});
+                    }
+                };
+
+                //Delete Book
+                $scope.itemDelete = function (id) {
+                    $http.delete("api/Students/" + id).then(function (response) {
+                        var index = $scope.student.findIndex(item => item.StudentId == id);
+                        $scope.student.splice(index, 1);
+                        $scope.refreshTable();
+                    });
+                };
+            });
+        </script>
+</body>
+</html>
